@@ -11,8 +11,8 @@ INDEX = f'''<main id="main">
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <h1><span>Pooja Karnik, BHMS · Klassiek homeopaat in Uithoorn en Aalsmeer</span>Eerst luisteren, daarna een behandeling voor de hele mens.</h1>
-      <p class="lead">Een eerste consult duurt ongeveer 90 minuten, zodat uw klachten, uw voorgeschiedenis en uw dagelijks leven aan bod kunnen komen. Opgeleid in India (BHMS, een opleiding van 5,5 jaar), diploma beoordeeld door Nuffic, geregistreerd bij NVKH, RBCZ en CAT. Consulten in Uithoorn, Aalsmeer en online.</p>
+      <h1><span>Pooja Karnik, BHMS, India · Klassiek homeopaat in Uithoorn en Aalsmeer</span>Eerst luisteren, daarna een persoonlijke, holistische homeopathische behandeling</h1>
+      <p class="lead">Een eerste consult duurt ongeveer 90 minuten, zodat uw klachten, uw voorgeschiedenis en uw dagelijks leven aan bod kunnen komen, om te komen tot een holistisch homeopathisch behandelplan. Opgeleid in India (BHMS, een opleiding van 5,5 jaar), diploma beoordeeld door Nuffic, geregistreerd bij NVKH, RBCZ en CAT. Consulten in Uithoorn, Aalsmeer en online.</p>
       <div class="btn-row">
         <a class="btn btn-primary" href="#appointment">{CAL}Maak een afspraak</a>
         <a class="btn btn-ghost" href="#credentials">Opleiding en registraties</a>
@@ -149,10 +149,10 @@ INDEX = f'''<main id="main">
     </div>
     <table class="prices">
       <tbody>
-        <tr><th scope="row">Eerste consult<small>Uitgebreide anamnese, ongeveer 90 minuten</small></th><td>€70</td></tr>
-        <tr><th scope="row">Vervolgconsult<small>30 tot 60 minuten, in de praktijk of online</small></th><td>€50</td></tr>
-        <tr><th scope="row">Acuut consult<small>Voor een nieuwe, kortdurende klacht</small></th><td>€50</td></tr>
-        <tr><th scope="row">Buiten kantooruren<small>Spoed, na werktijd</small></th><td>€75</td></tr>
+        <tr><th scope="row">Eerste consult<small>Uitgebreide anamnese, ongeveer 90 minuten</small></th><td>€90</td></tr>
+        <tr><th scope="row">Vervolgconsult<small>30 tot 60 minuten, in de praktijk of online</small></th><td>€70</td></tr>
+        <tr><th scope="row">Acuut consult<small>Voor een nieuwe, kortdurende klacht</small></th><td>€70</td></tr>
+        <tr><th scope="row">Buiten kantooruren<small>Spoed, na werktijd</small></th><td>€95</td></tr>
         <tr><th scope="row">Kort telefoongesprek<small>Minder dan 10 minuten</small></th><td>Gratis</td></tr>
       </tbody>
     </table>

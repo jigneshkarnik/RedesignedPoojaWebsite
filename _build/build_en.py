@@ -10,8 +10,8 @@ INDEX_MAIN = f'''<main id="main">
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <h1><span>Pooja Karnik, BHMS · Classical homeopath in Uithoorn and Aalsmeer</span>Listening first, then treatment for the whole person.</h1>
-      <p class="lead">Your first consultation lasts about 90 minutes, so that your complaints, your history and your daily life can all be heard. Trained in India (BHMS, a 5.5-year degree), diploma validated by Nuffic, registered with NVKH, RBCZ and CAT. Consultations in Uithoorn, Aalsmeer and online.</p>
+      <h1><span>Pooja Karnik, BHMS, India · Classical homeopath in Uithoorn and Aalsmeer</span>Listening first, then personalised wholistic homeopathic treatment</h1>
+      <p class="lead">Your first consultation lasts about 90 minutes, so that your complaints, your history and your daily life can all be heard, to arrive at wholistic homeopathic treatment plan. Trained in India (BHMS, a 5.5-year degree), diploma validated by Nuffic, registered with NVKH, RBCZ and CAT. Consultations in Uithoorn, Aalsmeer and online.</p>
       <div class="btn-row">
         <a class="btn btn-primary" href="#appointment">{CAL}Book a consultation</a>
         <a class="btn btn-ghost" href="#credentials">Qualifications and registrations</a>
@@ -148,10 +148,10 @@ INDEX_MAIN = f'''<main id="main">
     </div>
     <table class="prices">
       <tbody>
-        <tr><th scope="row">First consultation<small>Detailed case history, about 90 minutes</small></th><td>€70</td></tr>
-        <tr><th scope="row">Follow-up consultation<small>30 to 60 minutes, in person or online</small></th><td>€50</td></tr>
-        <tr><th scope="row">Acute consultation<small>For a new, short-term concern</small></th><td>€50</td></tr>
-        <tr><th scope="row">Outside office hours<small>Urgent, after hours</small></th><td>€75</td></tr>
+        <tr><th scope="row">First consultation<small>Detailed case history, about 90 minutes</small></th><td>€90</td></tr>
+        <tr><th scope="row">Follow-up consultation<small>30 to 60 minutes, in person or online</small></th><td>€70</td></tr>
+        <tr><th scope="row">Acute consultation<small>For a new, short-term concern</small></th><td>€70</td></tr>
+        <tr><th scope="row">Outside office hours<small>Urgent, after hours</small></th><td>€95</td></tr>
         <tr><th scope="row">Short phone call<small>Under 10 minutes</small></th><td>Free</td></tr>
       </tbody>
     </table>

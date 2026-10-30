@@ -31,7 +31,7 @@ Everything on the site counts as advertising. So:
 - **Uithoorn:** Antoon Coolenlaan 41, 1422 GN. Parking in front of the house; tram 25, bus 174 (confirmed correct). Practice is on the 2nd floor (attic) via stairs → **not wheelchair accessible**; online is the alternative.
 - **Aalsmeer:** Stationsweg 38, 1431 EG. Bus 340 from Hoofddorp/Uithoorn. **Wheelchair accessible** (confirmed).
 - By appointment Mon–Fri 9:00–17:00. Phone/WhatsApp +31 6 4563 9455, info@poojakarnik.com.
-- Rates: first consult (about 90 min) €70; follow-up (30–60 min) €50; acute €50; outside office hours €75; short phone call (<10 min) free. Payment by bank transfer on invoice, no PIN. Cancel ≥24 h ahead. Consultations VAT-exempt.
+- Rates: first consult (about 90 min) €90; follow-up (30–60 min) €70; acute €70; outside office hours €95; short phone call (<10 min) free. Payment by bank transfer on invoice, no PIN. Cancel ≥24 h ahead. Consultations VAT-exempt.
 - Please bring a list of medication to the first consultation (added to meet RBCZ preparation-info rule).
 
 ## Languages
