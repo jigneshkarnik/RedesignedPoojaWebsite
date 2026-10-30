@@ -85,6 +85,30 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.poojakarnik.com/algemene-voorwaarden.html"/>
   </url>
   <url>
+    <loc>https://www.poojakarnik.com/homeopath-uithoorn.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.poojakarnik.com/homeopath-uithoorn.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.poojakarnik.com/nl/homeopaat-uithoorn.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.poojakarnik.com/homeopath-uithoorn.html"/>
+  </url>
+  <url>
+    <loc>https://www.poojakarnik.com/nl/homeopaat-uithoorn.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.poojakarnik.com/homeopath-uithoorn.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.poojakarnik.com/nl/homeopaat-uithoorn.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.poojakarnik.com/homeopath-uithoorn.html"/>
+  </url>
+  <url>
+    <loc>https://www.poojakarnik.com/homeopath-aalsmeer.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.poojakarnik.com/homeopath-aalsmeer.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.poojakarnik.com/nl/homeopaat-aalsmeer.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.poojakarnik.com/homeopath-aalsmeer.html"/>
+  </url>
+  <url>
+    <loc>https://www.poojakarnik.com/nl/homeopaat-aalsmeer.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.poojakarnik.com/homeopath-aalsmeer.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.poojakarnik.com/nl/homeopaat-aalsmeer.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.poojakarnik.com/homeopath-aalsmeer.html"/>
+  </url>
+  <url>
     <loc>https://www.poojakarnik.com/sessions.html</loc>
   </url>
   <url>

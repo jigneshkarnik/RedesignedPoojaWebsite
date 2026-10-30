@@ -20,7 +20,7 @@ T = {
   f_about="Classical homeopath (BHMS) with 25 years of experience. Registered with NVKH and RBCZ. Consultations in Uithoorn, Aalsmeer and online.",
   f_practice="Practice", f_biz="Business details", f_know="Good to know",
   f_vat="Homeopathic consultations are exempt from VAT.",
-  f_links=[("klachtenregeling.html","Klachtenregeling (complaints)"),("privacy.html","Privacyverklaring (privacy)"),("algemene-voorwaarden.html","Algemene voorwaarden (terms)"),("community.html","Community work")],
+  f_links=[("homeopath-uithoorn.html","Homeopath in Uithoorn"),("homeopath-aalsmeer.html","Homeopath in Aalsmeer"),("klachtenregeling.html","Klachtenregeling (complaints)"),("privacy.html","Privacyverklaring (privacy)"),("algemene-voorwaarden.html","Algemene voorwaarden (terms)"),("community.html","Community work")],
   f_disc="Homeopathy is a complementary approach and does not replace care from your GP or specialist. Please never stop or change prescribed medication without speaking to your doctor. In an emergency call 112.",
   f_copy="&copy; 2026 Pooja Karnik. This website uses no tracking cookies.",
   f_cch="Central Council of Homeopathy (India)",
@@ -32,7 +32,7 @@ T = {
   f_about="Klassiek homeopaat (BHMS) met 25 jaar ervaring. Geregistreerd bij NVKH en RBCZ. Consulten in Uithoorn, Aalsmeer en online.",
   f_practice="Praktijk", f_biz="Bedrijfsgegevens", f_know="Goed om te weten",
   f_vat="Homeopathische consulten zijn vrijgesteld van btw.",
-  f_links=[("klachtenregeling.html","Klachtenregeling"),("privacy.html","Privacyverklaring"),("algemene-voorwaarden.html","Algemene voorwaarden"),("../community.html","Vrijwilligerswerk (EN)")],
+  f_links=[("homeopaat-uithoorn.html","Homeopaat in Uithoorn"),("homeopaat-aalsmeer.html","Homeopaat in Aalsmeer"),("klachtenregeling.html","Klachtenregeling"),("privacy.html","Privacyverklaring"),("algemene-voorwaarden.html","Algemene voorwaarden"),("../community.html","Vrijwilligerswerk (EN)")],
   f_disc="Homeopathie is een complementaire benadering en vervangt niet de zorg van uw huisarts of specialist. Stop of wijzig nooit voorgeschreven medicatie zonder overleg met uw arts. Bel bij nood 112.",
   f_copy="&copy; 2026 Pooja Karnik. Deze website gebruikt geen trackingcookies.",
   f_cch="Central Council of Homeopathy (India)",
@@ -89,6 +89,35 @@ def jsonld(lang):
       }]}
     return json.dumps(data, ensure_ascii=False, indent=2)
 
+LOCS = {
+  "uithoorn": dict(name="Uithoorn", street="Antoon Coolenlaan 41", zip="1422 GN", q="Antoon+Coolenlaan+41+1422+GN+Uithoorn"),
+  "aalsmeer": dict(name="Aalsmeer", street="Stationsweg 38", zip="1431 EG", q="Stationsweg+38+1431+EG+Aalsmeer"),
+}
+
+def loc_jsonld(lang, city, self_url):
+    import json
+    nl = lang == "nl"
+    L = LOCS[city]
+    data = {
+      "@context": "https://schema.org",
+      "@type": ["MedicalBusiness", "ProfessionalService"],
+      "@id": f"{BASE}/#practice-{city}",
+      "name": f"Pooja Karnik Homeopathy Consulting, {L['name']}",
+      "description": (f"Klassiek homeopaat in {L['name']}. Eerste consult van ongeveer 90 minuten, op afspraak."
+                      if nl else f"Classical homeopath in {L['name']}. First consultation of about 90 minutes, by appointment."),
+      "url": self_url,
+      "image": BASE + "/images/pooja_karnik.jpg",
+      "telephone": "+31645639455", "email": "info@poojakarnik.com",
+      "medicalSpecialty": "Homeopathy",
+      "address": {"@type": "PostalAddress", "streetAddress": L["street"], "postalCode": L["zip"],
+                  "addressLocality": L["name"], "addressCountry": "NL"},
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=" + L["q"],
+      "openingHoursSpecification": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "17:00"},
+      "parentOrganization": {"@id": BASE + "/#practice"},
+      "knowsLanguage": ["en", "nl"],
+    }
+    return json.dumps(data, ensure_ascii=False, indent=2)
+
 def head(lang, title, desc, alt_en, alt_nl, key=""):
     p = "../" if lang == "nl" else ""
     # root-relative paths of the two language versions
@@ -101,6 +130,8 @@ def head(lang, title, desc, alt_en, alt_nl, key=""):
         f'  <link rel="alternate" hreflang="nl" href="{url(nl_path)}">\n'
         f'  <link rel="alternate" hreflang="x-default" href="{url(en_path)}">\n')
     ld = f'  <script type="application/ld+json">\n{jsonld(lang)}\n  </script>\n' if key == "home" else ""
+    if key.startswith("loc-"):
+        ld = f'  <script type="application/ld+json">\n{loc_jsonld(lang, key[4:], self_url)}\n  </script>\n'
     loc, loc_alt = ("nl_NL", "en_GB") if lang == "nl" else ("en_GB", "nl_NL")
     return f'''<!DOCTYPE html>
 <html lang="{lang}">

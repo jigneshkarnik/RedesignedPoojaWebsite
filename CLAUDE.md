@@ -43,8 +43,9 @@ Everything on the site counts as advertising. So:
 ## How the site is built
 Header/footer are duplicated across 17 pages, so they are generated. Source: `_build/` (underscore folders are ignored by GitHub Pages).
 ```
-python3 _build/build_en.py && python3 _build/build_nl.py
+python3 _build/build_en.py && python3 _build/build_nl.py && python3 _build/build_locations.py
 ```
+- `build_locations.py`: Uithoorn/Aalsmeer landing pages (EN `homeopath-<city>.html`, NL `nl/homeopaat-<city>.html`) with per-location JSON-LD (`loc_jsonld`); add new locations to `LOCS` in `build_common.py` and the sitemap.
 - `build_common.py`: shared head/header/footer (EN+NL strings in `T`), lang switch. `build_en.py` / `build_nl.py`: page `<main>` content. Running them **overwrites** the generated pages — edit the scripts (not the HTML) for anything on home/about/legal pages, then rebuild. `homeopathy.html`, `faq.html`, `algemene-voorwaarden.html`, `privacy.html`, `sessions/articles/community.html` EN bodies are read from the existing HTML and only re-wrapped (edit those HTML files directly for body text).
 - Styling: `css/style.css` (aubergine/amber palette, Hanken Grotesk). Credentials grid = `.creds`, language switch = `.lang-switch`.
 

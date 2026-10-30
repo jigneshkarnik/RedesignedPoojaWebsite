@@ -122,12 +122,14 @@ INDEX_MAIN = f'''<main id="main">
       <article class="place">
         <h3>Uithoorn</h3>
         <address>Antoon Coolenlaan 41<br>1422 GN Uithoorn</address>
+        <p><a href="homeopath-uithoorn.html">More about Uithoorn →</a></p>
         <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Antoon+Coolenlaan+41+1422+GN+Uithoorn" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a></p>
         <ul class="tags"><li>By car: parking in front of the house</li><li>Public transport: tram 25, bus 174</li><li>Not accessible for wheelchair users: the practice is on the second floor, reached by stairs. An online consultation is an alternative</li></ul>
       </article>
       <article class="place">
         <h3>Aalsmeer</h3>
         <address>Stationsweg 38<br>1431 EG Aalsmeer</address>
+        <p><a href="homeopath-aalsmeer.html">More about Aalsmeer →</a></p>
         <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Stationsweg+38+1431+EG+Aalsmeer" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a></p>
         <ul class="tags"><li>Public transport: bus 340 from Hoofdorp or Uithoorn</li><li>Wheelchair accessible</li></ul>
       </article>
