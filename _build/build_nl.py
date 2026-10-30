@@ -106,8 +106,8 @@ INDEX = f'''<main id="main">
       <li><strong>KvK</strong><span>Kamer van Koophandel nr. 85796700</span></li>
     </ul>
     <div class="partner-logos">
-      <img src="{IMG}affiliation5.png" alt="NVKH – Nederlandse Vereniging van Klassiek Homeopaten">
-      <img src="{IMG}affiliation6.png" alt="RBCZ – Een vrije zorgkeuze">
+      <img src="{IMG}affiliation5.png" width="1888" height="499" alt="NVKH – Nederlandse Vereniging van Klassiek Homeopaten">
+      <img src="{IMG}affiliation6.png" width="180" height="89" alt="RBCZ – Een vrije zorgkeuze">
     </div>
     <div class="note-box" style="margin-top:2rem"><strong>Kwaliteit en klachten:</strong> mijn praktijkvoering wordt vijfjaarlijks beoordeeld aan de hand van de kwaliteitscriteria van RBCZ en de NVKH; de eerste visitatie door de NVKH vond plaats in oktober 2024. Als geregistreerd therapeut val ik onder de onafhankelijke tuchtrechtspraak van TCZ. Voor klachten en geschillen, zie de <a href="klachtenregeling.html">klachtenregeling</a>.</div>
   </div>
@@ -218,7 +218,7 @@ INDEX = f'''<main id="main">
 </main>'''
 write("nl/index.html", nlpage("home",
   "Klassiek homeopaat in Uithoorn &amp; Aalsmeer | Pooja Karnik",
-  "Pooja Karnik, BHMS: klassiek homeopaat (homeopathie) in Uithoorn en Aalsmeer, en online in heel Nederland. 25 jaar ervaring, eerste consult ongeveer 90 minuten. Aangesloten bij NVKH, RBCZ en CAT.",
+  "Pooja Karnik, BHMS: klassiek homeopaat in Uithoorn, Aalsmeer en online. 25 jaar ervaring; eerste consult ongeveer 90 minuten.",
   INDEX, "index.html"))
 
 # ---------------------------------------------------------------- ABOUT
@@ -274,7 +274,7 @@ ABOUT = f'''<main id="main">
 
 </main>'''
 write("nl/about.html", nlpage("about", "Over Pooja Karnik – Klassiek homeopaat in Uithoorn &amp; Aalsmeer",
-  "Pooja Karnik, BHMS (India): klassiek homeopaat met 25 jaar praktijkervaring in India, het Verenigd Koninkrijk, de VS en Nederland. Diploma beoordeeld door Nuffic. Geregistreerd bij NVKH, RBCZ en CAT. Praktijk in Uithoorn en Aalsmeer.", ABOUT, "about.html"))
+  "Pooja Karnik, BHMS: klassiek homeopaat met 25 jaar praktijkervaring in India, het Verenigd Koninkrijk, de VS en Nederland. Aangesloten bij NVKH en RBCZ.", ABOUT, "about.html"))
 
 # ---------------------------------------------------------------- HOMEOPATHY
 IC1 = f'<svg {SV}><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14"/><path d="M5 19c2-5 5-8 9-10"/></svg>'
@@ -356,7 +356,7 @@ KL = '''<main id="main">
   <p>Voelt u zich niet in staat uw klacht met mij te bespreken, laat de situatie dit niet toe of komen we er samen niet uit? Dan kunt u kosteloos de onafhankelijke klachtenfunctionaris van <strong>Quasir Expertisecentrum klachtbehandeling</strong> inschakelen. De klachtenfunctionaris ondersteunt u bij het formuleren van uw klacht en bij het onderzoeken van oplossingen, is onafhankelijk en onpartijdig, en uw klacht wordt binnen zes weken afgehandeld. Ik word op de hoogte gesteld dat u een klacht heeft ingediend. U bereikt de klachtenfunctionaris via de NVKH: <a href="https://www.nvkh.nl/contact/ik-heb-een-klacht/" target="_blank" rel="noopener noreferrer">nvkh.nl/contact/ik-heb-een-klacht</a>.</p>
   <p>Wilt u geen klacht indienen maar wel uw onvrede kenbaar maken bij de beroepsvereniging, dan kunt u contact opnemen met het secretariaat van de NVKH via <a href="mailto:info@nvkh.nl">info@nvkh.nl</a> of telefonisch op 0172-499595 (9.00–12.30 uur).</p>
   <h3>3. Geschilleninstantie</h3>
-  <p>Wordt uw klacht naar uw mening niet opgelost, dan kan een geschil ontstaan. Conform de Wkkgz zijn alle homeopaten die lid zijn van de NVKH, dus ook ik, aangesloten bij de door de overheid erkende geschilleninstantie <strong>Stichting Zorggeschil</strong>. Volgens de NVKH kost het indienen van een geschil op het moment van schrijven € 50 en doet de geschillencommissie binnen zes maanden een bindende uitspraak. Meer informatie: <a href="https://www.zorggeschil.nl" target="_blank" rel="noopener noreferrer">zorggeschil.nl</a>.</p>
+  <p>Wordt uw klacht naar uw mening niet opgelost, dan kan een geschil ontstaan. Conform de Wkkgz zijn alle homeopaten die lid zijn van de NVKH, dus ook ik, aangesloten bij de door de overheid erkende geschilleninstantie <strong>Stichting Zorggeschil</strong>. Volgens de NVKH kost het indienen van een geschil op het moment van schrijven €50 en doet de geschillencommissie binnen zes maanden een bindende uitspraak. Meer informatie: <a href="https://www.zorggeschil.nl" target="_blank" rel="noopener noreferrer">zorggeschil.nl</a>.</p>
   <h3>4. Tuchtrecht</h3>
   <p>Als bij RBCZ geregistreerd therapeut val ik onder de onafhankelijke tuchtrechtspraak van <strong>Tuchtrecht Complementaire Zorg (TCZ)</strong>. Bij een ernstige klacht over mijn handelen kan de klachtenfunctionaris u adviseren uw klacht in te dienen bij TCZ, bij de Inspectie Gezondheidszorg en Jeugd of bij een civiele rechter. Meer informatie: <a href="https://www.tcz.nu" target="_blank" rel="noopener noreferrer">tcz.nu</a>.</p>
 </div></section>
@@ -369,7 +369,6 @@ write("nl/klachtenregeling.html", nlpage("klacht", "Klachtenregeling | Pooja Kar
 AV = '''<main id="main">
 <section class="page-head"><div class="wrap"><h1>Algemene voorwaarden</h1><p>Voorwaarden van de praktijk</p></div></section>
 <section class="s-white"><div class="wrap narrow prose">
-  <!-- TODO (praktijkhouder): dit is een eenvoudige conceptversie. Controleer of vervang deze tekst aan de hand van de modelvoorwaarden van de NVKH voordat de site live gaat. -->
   <h2 style="margin-top:0">1. Afspraken</h2>
   <p>Consulten vinden uitsluitend op afspraak plaats, maandag tot en met vrijdag van 9:00 tot 17:00, in de praktijk in Uithoorn of Aalsmeer, of online via een videogesprek.</p>
   <h2>2. Annuleren</h2>

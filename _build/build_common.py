@@ -204,8 +204,8 @@ def footer(lang):
         <h3>Pooja Karnik</h3>
         <p>{t["f_about"]}</p>
         <div class="foot-logos">
-          <img src="{p}images/affiliation5.png" alt="{t["nvkh_alt"]}">
-          <img src="{p}images/affiliation6.png" alt="{t["rbcz_alt"]}">
+          <img src="{p}images/affiliation5.png" width="1888" height="499" alt="{t["nvkh_alt"]}">
+          <img src="{p}images/affiliation6.png" width="180" height="89" alt="{t["rbcz_alt"]}">
         </div>
       </div>
       <div>

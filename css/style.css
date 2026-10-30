@@ -1,4 +1,4 @@
-/* Dr Pooja Karnik — dispensary redesign
+/* Pooja Karnik — site styles
    Fonts are self-hosted: the site sets no cookies and makes no third-party requests. */
 
 @font-face { font-family: "Hanken Grotesk"; font-weight: 100 900; font-style: normal; font-display: swap; src: url("../fonts/hanken-grotesk-latin-wght-normal.woff2") format("woff2"); }
@@ -106,7 +106,7 @@ p { margin: 0 0 1em; }
 .creds-compact { grid-template-columns: repeat(2, 1fr); margin: 1.8rem 0 0; }
 .creds-compact strong { font-size: 1.3rem; }
 
-/* Register: credentials as a doctor's professional register */
+/* Register: credentials as a professional register */
 .register { background: var(--white); border-bottom: 1px solid var(--line); }
 .register .wrap { display: grid; grid-template-columns: repeat(4, 1fr); }
 .reg-item { padding: 1.6rem 1.4rem 1.6rem 0; border-right: 1px solid var(--line); margin-right: 1.4rem; }

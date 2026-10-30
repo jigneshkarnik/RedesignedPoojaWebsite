@@ -105,8 +105,8 @@ INDEX_MAIN = f'''<main id="main">
       <li><strong>KvK</strong><span>Chamber of Commerce no. 85796700</span></li>
     </ul>
     <div class="partner-logos">
-      <img src="images/affiliation5.png" alt="NVKH – Nederlandse Vereniging van Klassiek Homeopaten">
-      <img src="images/affiliation6.png" alt="RBCZ – Een vrije zorgkeuze">
+      <img src="images/affiliation5.png" width="1888" height="499" alt="NVKH – Nederlandse Vereniging van Klassiek Homeopaten">
+      <img src="images/affiliation6.png" width="180" height="89" alt="RBCZ – Een vrije zorgkeuze">
     </div>
     <div class="note-box" style="margin-top:2rem"><strong>Quality and complaints:</strong> my practice is reviewed every five years against the quality criteria of RBCZ and NVKH; the first NVKH practice visit took place in October 2024. As a registered therapist I fall under the independent disciplinary law (<em>tuchtrecht</em>) of TCZ. For complaints and disputes, see the <a href="klachtenregeling.html">complaints procedure</a>.</div>
   </div>
@@ -218,7 +218,7 @@ INDEX_MAIN = f'''<main id="main">
 
 write("index.html", page("en","home",
   "Classical Homeopath in Uithoorn &amp; Aalsmeer | Pooja Karnik",
-  "Pooja Karnik, BHMS: classical homeopath in Uithoorn and Aalsmeer, and online across the Netherlands. 25 years of experience, first consultation about 90 minutes. Registered with NVKH, RBCZ and CAT.",
+  "Pooja Karnik, BHMS: classical homeopath in Uithoorn, Aalsmeer and online. 25 years of experience; first consultation about 90 minutes.",
   INDEX_MAIN, "index.html", "nl/index.html", "nl/index.html"))
 
 # ---------------------------------------------------------------- ABOUT
@@ -275,7 +275,7 @@ ABOUT_MAIN = '''<main id="main">
 </main>'''
 write("about.html", page("en","about",
   "About Pooja Karnik – Classical Homeopath in Uithoorn &amp; Aalsmeer",
-  "Pooja Karnik, BHMS (India): classical homeopath with 25 years of practice in India, the UK, the US and the Netherlands. Diploma validated by Nuffic. Registered with NVKH, RBCZ and CAT. Practising in Uithoorn and Aalsmeer.",
+  "Pooja Karnik, BHMS: classical homeopath with 25 years of practice in India, the UK, the US and the Netherlands. Registered with NVKH and RBCZ.",
   ABOUT_MAIN, "about.html", "nl/about.html", "nl/about.html"))
 
 # ---------------------------------------------------------------- HOMEOPATHY (edit existing)
