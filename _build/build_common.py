@@ -20,7 +20,7 @@ T = {
   f_about="Classical homeopath (BHMS) with 25 years of experience. Registered with NVKH and RBCZ. Consultations in Uithoorn, Aalsmeer and online.",
   f_practice="Practice", f_biz="Business details", f_know="Good to know",
   f_vat="Homeopathic consultations are exempt from VAT.",
-  f_links=[("homeopath-uithoorn.html","Homeopath in Uithoorn"),("homeopath-aalsmeer.html","Homeopath in Aalsmeer"),("klachtenregeling.html","Klachtenregeling (complaints)"),("privacy.html","Privacyverklaring (privacy)"),("algemene-voorwaarden.html","Algemene voorwaarden (terms)"),("community.html","Community work")],
+  f_links=[("homeopath-uithoorn.html","Homeopath in Uithoorn"),("homeopath-aalsmeer.html","Homeopath in Aalsmeer"),("klachtenregeling.html","Klachtenregeling (complaints)"),("privacy.html","Privacyverklaring (privacy)"),("algemene-voorwaarden.html","Algemene voorwaarden (terms)"),("community.html","Community work"),("https://jigneshkarnik.github.io/pooja-tools/","Members only")],
   f_disc="Homeopathy is a complementary approach and does not replace care from your GP or specialist. Please never stop or change prescribed medication without speaking to your doctor. In an emergency call 112.",
   f_copy="&copy; 2026 Pooja Karnik. This website uses no tracking cookies.",
   f_cch="Central Council of Homeopathy (India)",
@@ -32,7 +32,7 @@ T = {
   f_about="Klassiek homeopaat (BHMS) met 25 jaar ervaring. Geregistreerd bij NVKH en RBCZ. Consulten in Uithoorn, Aalsmeer en online.",
   f_practice="Praktijk", f_biz="Bedrijfsgegevens", f_know="Goed om te weten",
   f_vat="Homeopathische consulten zijn vrijgesteld van btw.",
-  f_links=[("homeopaat-uithoorn.html","Homeopaat in Uithoorn"),("homeopaat-aalsmeer.html","Homeopaat in Aalsmeer"),("klachtenregeling.html","Klachtenregeling"),("privacy.html","Privacyverklaring"),("algemene-voorwaarden.html","Algemene voorwaarden"),("../community.html","Vrijwilligerswerk (EN)")],
+  f_links=[("homeopaat-uithoorn.html","Homeopaat in Uithoorn"),("homeopaat-aalsmeer.html","Homeopaat in Aalsmeer"),("klachtenregeling.html","Klachtenregeling"),("privacy.html","Privacyverklaring"),("algemene-voorwaarden.html","Algemene voorwaarden"),("../community.html","Vrijwilligerswerk (EN)"),("https://jigneshkarnik.github.io/pooja-tools/","Alleen voor leden")],
   f_disc="Homeopathie is een complementaire benadering en vervangt niet de zorg van uw huisarts of specialist. Stop of wijzig nooit voorgeschreven medicatie zonder overleg met uw arts. Bel bij nood 112.",
   f_copy="&copy; 2026 Pooja Karnik. Deze website gebruikt geen trackingcookies.",
   f_cch="Central Council of Homeopathy (India)",
@@ -196,7 +196,7 @@ def header(lang, page, alt_href):
 def footer(lang):
     t = T[lang]
     p = "../" if lang == "nl" else ""
-    lis = "\n".join(f'          <li><a href="{h}">{l}</a></li>' for h, l in t["f_links"])
+    lis = "\n".join(f'          <li><a href="{h}"{(" rel=" + chr(34) + "noopener nofollow" + chr(34)) if h.startswith("http") else ""}>{l}</a></li>' for h, l in t["f_links"])
     return f'''<footer class="site-footer">
   <div class="wrap">
     <div class="foot-grid">
