@@ -16,7 +16,7 @@ T = {
  "en": dict(
   lang="en", home="Home", about="About me", homeo="Homeopathy", faq="FAQ", sessions="Talks & Training",
   articles="Articles", cta="Book a consultation", skip="Skip to content", role="Classical homeopath",
-  menu="Menu", main_nav="Main", brand_aria="Pooja Karnik, home", lang_label="Language",
+  books="Books", certs="Certificates (opens PDF)", menu="Menu", main_nav="Main", brand_aria="Pooja Karnik, home", lang_label="Language",
   f_about="Classical homeopath (BHMS) with 25 years of experience. Registered with NVKH and RBCZ. Consultations in Uithoorn, Aalsmeer and online.",
   f_practice="Practice", f_biz="Business details", f_know="Good to know",
   f_vat="Homeopathic consultations are exempt from VAT.",
@@ -24,11 +24,12 @@ T = {
   f_disc="Homeopathy is a complementary approach and does not replace care from your GP or specialist. Please never stop or change prescribed medication without speaking to your doctor. In an emergency call 112.",
   f_copy="&copy; 2026 Pooja Karnik. This website uses no tracking cookies.",
   f_cch="Central Council of Homeopathy (India)",
-  nvkh_alt="NVKH – Nederlandse Vereniging van Klassiek Homeopaten", rbcz_alt="RBCZ – Een vrije zorgkeuze"),
+  nvkh_alt="NVKH – Nederlandse Vereniging van Klassiek Homeopaten", rbcz_alt="RBCZ – Een vrije zorgkeuze",
+  cert_names=["NVKH registration","RBCZ licence","Nuffic diploma assessment","CCH registration (India)","Diploma (MBK)","AGB registration"]),
  "nl": dict(
   lang="nl", home="Home", about="Over mij", homeo="Homeopathie", faq="Veelgestelde vragen", sessions="Lezingen &amp; trainingen (EN)",
   articles="Artikelen (EN)", cta="Maak een afspraak", skip="Ga naar de inhoud", role="Klassiek homeopaat",
-  menu="Menu", main_nav="Hoofdmenu", brand_aria="Pooja Karnik, home", lang_label="Taal",
+  books="Boeken", certs="Certificaten (opent PDF)", menu="Menu", main_nav="Hoofdmenu", brand_aria="Pooja Karnik, home", lang_label="Taal",
   f_about="Klassiek homeopaat (BHMS) met 25 jaar ervaring. Geregistreerd bij NVKH en RBCZ. Consulten in Uithoorn, Aalsmeer en online.",
   f_practice="Praktijk", f_biz="Bedrijfsgegevens", f_know="Goed om te weten",
   f_vat="Homeopathische consulten zijn vrijgesteld van btw.",
@@ -36,8 +37,12 @@ T = {
   f_disc="Homeopathie is een complementaire benadering en vervangt niet de zorg van uw huisarts of specialist. Stop of wijzig nooit voorgeschreven medicatie zonder overleg met uw arts. Bel bij nood 112.",
   f_copy="&copy; 2026 Pooja Karnik. Deze website gebruikt geen trackingcookies.",
   f_cch="Central Council of Homeopathy (India)",
-  nvkh_alt="NVKH – Nederlandse Vereniging van Klassiek Homeopaten", rbcz_alt="RBCZ – Een vrije zorgkeuze"),
+  nvkh_alt="NVKH – Nederlandse Vereniging van Klassiek Homeopaten", rbcz_alt="RBCZ – Een vrije zorgkeuze",
+  cert_names=["NVKH-registratie","RBCZ-licentie","Nuffic diplomawaardering","CCH-registratie (India)","Diploma (MBK)","AGB-registratie"]),
 }
+
+BOOKS_URL = "https://webshop.poojakarnik.com/"
+CERTS = [("NVKH%20Registration-24021","NVKH"),("RBCZ","RBCZ"),("Nuffic","Nuffic"),("CCH","CCH"),("MBK","MBK"),("AGB","AGB")]
 
 BASE = "https://www.poojakarnik.com"   # production origin: canonical, hreflang, sitemap, structured data
 EN_ONLY = {"sessions", "articles", "community"}   # no Dutch twin, so no hreflang pair
@@ -172,7 +177,7 @@ def header(lang, page, alt_href):
     else:
         links = [("home","index.html",t["home"]),("about","about.html",t["about"]),("homeo","homeopathy.html",t["homeo"]),("faq","faq.html",t["faq"]),("sessions","../sessions.html",t["sessions"]),("articles","../articles.html",t["articles"])]
         cta = "index.html#appointment"
-    lis = "".join(a(*l) for l in links)
+    lis = "".join(a(*l) for l in links) + f'<li><a href="{BOOKS_URL}" target="_blank" rel="noopener">{t["books"]}</a></li>'
     if lang == "en":
         sw = f'<li class="lang-switch" role="group" aria-label="{t["lang_label"]}"><a class="on" href="" aria-current="true" lang="en" hreflang="en">EN</a><span aria-hidden="true">/</span><a href="{alt_href}" lang="nl" hreflang="nl">NL</a></li>'
     else:
@@ -197,6 +202,7 @@ def footer(lang):
     t = T[lang]
     p = "../" if lang == "nl" else ""
     lis = "\n".join(f'          <li><a href="{h}"{(" rel=" + chr(34) + "noopener nofollow" + chr(34)) if h.startswith("http") else ""}>{l}</a></li>' for h, l in t["f_links"])
+    certs = "\n".join(f'          <li><a href="{p}Licenses/{f}.pdf" target="_blank" rel="noopener" title="{n}"><img src="{p}images/licenses/{th}.jpg" width="360" height="255" loading="lazy" alt="{n}"></a></li>' for (f, th), n in zip(CERTS, t["cert_names"]))
     return f'''<footer class="site-footer">
   <div class="wrap">
     <div class="foot-grid">
@@ -207,6 +213,9 @@ def footer(lang):
           <img src="{p}images/affiliation5.png" width="1888" height="499" alt="{t["nvkh_alt"]}">
           <img src="{p}images/affiliation6.png" width="180" height="89" alt="{t["rbcz_alt"]}">
         </div>
+        <ul class="foot-certs" aria-label="{t["certs"]}">
+{certs}
+        </ul>
       </div>
       <div>
         <h3>{t["f_practice"]}</h3>
