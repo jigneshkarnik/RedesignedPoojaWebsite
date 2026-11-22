@@ -117,4 +117,16 @@
   <url>
     <loc>https://www.poojakarnik.com/community.html</loc>
   </url>
+  <url>
+    <loc>https://www.poojakarnik.com/forms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.poojakarnik.com/forms.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.poojakarnik.com/nl/forms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.poojakarnik.com/forms.html"/>
+  </url>
+  <url>
+    <loc>https://www.poojakarnik.com/nl/forms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.poojakarnik.com/forms.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.poojakarnik.com/nl/forms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.poojakarnik.com/forms.html"/>
+  </url>
 </urlset>

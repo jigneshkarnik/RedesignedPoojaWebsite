@@ -20,7 +20,7 @@ T = {
   f_about="Classical homeopath (BHMS) with 25 years of experience. Registered with NVKH and RBCZ. Consultations in Uithoorn, Aalsmeer and online.",
   f_practice="Practice", f_biz="Business details", f_know="Good to know",
   f_vat="Homeopathic consultations are exempt from VAT.",
-  f_links=[("homeopath-uithoorn.html","Homeopath in Uithoorn"),("homeopath-aalsmeer.html","Homeopath in Aalsmeer"),("klachtenregeling.html","Klachtenregeling (complaints)"),("privacy.html","Privacyverklaring (privacy)"),("algemene-voorwaarden.html","Algemene voorwaarden (terms)"),("community.html","Community work"),("https://jigneshkarnik.github.io/pooja-tools/","Staff area (password required)")],
+  f_links=[("homeopath-uithoorn.html","Homeopath in Uithoorn"),("homeopath-aalsmeer.html","Homeopath in Aalsmeer"),("klachtenregeling.html","Klachtenregeling (complaints)"),("privacy.html","Privacyverklaring (privacy)"),("forms.html","Forms"),("algemene-voorwaarden.html","Algemene voorwaarden (terms)"),("community.html","Community work"),("https://jigneshkarnik.github.io/pooja-tools/","Staff area (password required)")],
   f_disc="Homeopathy is a complementary approach and does not replace care from your GP or specialist. Please never stop or change prescribed medication without speaking to your doctor. In an emergency call 112.",
   f_copy="&copy; 2026 Pooja Karnik. This website uses no tracking cookies.",
   f_cch="Central Council of Homeopathy (India)",
@@ -32,7 +32,7 @@ T = {
   f_about="Klassiek homeopaat (BHMS) met 25 jaar ervaring. Geregistreerd bij NVKH en RBCZ. Consulten in Uithoorn, Aalsmeer en online.",
   f_practice="Praktijk", f_biz="Bedrijfsgegevens", f_know="Goed om te weten",
   f_vat="Homeopathische consulten zijn vrijgesteld van btw.",
-  f_links=[("homeopaat-uithoorn.html","Homeopaat in Uithoorn"),("homeopaat-aalsmeer.html","Homeopaat in Aalsmeer"),("klachtenregeling.html","Klachtenregeling"),("privacy.html","Privacyverklaring"),("algemene-voorwaarden.html","Algemene voorwaarden"),("../community.html","Vrijwilligerswerk (EN)"),("https://jigneshkarnik.github.io/pooja-tools/","Medewerkersgedeelte (met wachtwoord) (EN)")],
+  f_links=[("homeopaat-uithoorn.html","Homeopaat in Uithoorn"),("homeopaat-aalsmeer.html","Homeopaat in Aalsmeer"),("klachtenregeling.html","Klachtenregeling"),("privacy.html","Privacyverklaring"),("forms.html","Formulieren"),("algemene-voorwaarden.html","Algemene voorwaarden"),("../community.html","Vrijwilligerswerk (EN)"),("https://jigneshkarnik.github.io/pooja-tools/","Medewerkersgedeelte (met wachtwoord) (EN)")],
   f_disc="Homeopathie is een complementaire benadering en vervangt niet de zorg van uw huisarts of specialist. Stop of wijzig nooit voorgeschreven medicatie zonder overleg met uw arts. Bel bij nood 112.",
   f_copy="&copy; 2026 Pooja Karnik. Deze website gebruikt geen trackingcookies.",
   f_cch="Central Council of Homeopathy (India)",
@@ -44,7 +44,7 @@ EN_ONLY = {"sessions", "articles", "community"}   # no Dutch twin, so no hreflan
 
 # Meta-tag CSP: works on any static host (GitHub Pages cannot send headers). Keep in sync with _headers.
 CSP = ("default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; "
-       "font-src 'self'; connect-src https://api.web3forms.com; frame-src https://www.youtube-nocookie.com; "
+       "font-src 'self'; connect-src https://api.web3forms.com; frame-src 'self' https://www.youtube-nocookie.com; "
        "form-action https://api.web3forms.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests")
 
 def url(path):
