@@ -16,7 +16,7 @@ T = {
  "en": dict(
   lang="en", home="Home", about="About me", homeo="Homeopathy", faq="FAQ", sessions="Talks & Training",
   articles="Articles", cta="Book a consultation", skip="Skip to content", role="Classical homeopath",
-  books="Books", certs="Certificates (opens PDF)", menu="Menu", main_nav="Main", brand_aria="Pooja Karnik, home", lang_label="Language",
+  books="Books", certs_h="Certificates and registrations (PDF)", menu="Menu", main_nav="Main", brand_aria="Pooja Karnik, home", lang_label="Language",
   f_about="Classical homeopath (BHMS) with 25 years of experience. Registered with NVKH and RBCZ. Consultations in Uithoorn, Aalsmeer and online.",
   f_practice="Practice", f_biz="Business details", f_know="Good to know",
   f_vat="Homeopathic consultations are exempt from VAT.",
@@ -29,7 +29,7 @@ T = {
  "nl": dict(
   lang="nl", home="Home", about="Over mij", homeo="Homeopathie", faq="Veelgestelde vragen", sessions="Lezingen &amp; trainingen (EN)",
   articles="Artikelen (EN)", cta="Maak een afspraak", skip="Ga naar de inhoud", role="Klassiek homeopaat",
-  books="Boeken", certs="Certificaten (opent PDF)", menu="Menu", main_nav="Hoofdmenu", brand_aria="Pooja Karnik, home", lang_label="Taal",
+  books="Boeken", certs_h="Certificaten en registraties (PDF)", menu="Menu", main_nav="Hoofdmenu", brand_aria="Pooja Karnik, home", lang_label="Taal",
   f_about="Klassiek homeopaat (BHMS) met 25 jaar ervaring. Geregistreerd bij NVKH en RBCZ. Consulten in Uithoorn, Aalsmeer en online.",
   f_practice="Praktijk", f_biz="Bedrijfsgegevens", f_know="Goed om te weten",
   f_vat="Homeopathische consulten zijn vrijgesteld van btw.",
@@ -202,7 +202,7 @@ def footer(lang):
     t = T[lang]
     p = "../" if lang == "nl" else ""
     lis = "\n".join(f'          <li><a href="{h}"{(" rel=" + chr(34) + "noopener nofollow" + chr(34)) if h.startswith("http") else ""}>{l}</a></li>' for h, l in t["f_links"])
-    certs = "\n".join(f'          <li><a href="{p}Licenses/{f}.pdf" target="_blank" rel="noopener" title="{n}"><img src="{p}images/licenses/{th}.jpg" width="360" height="255" loading="lazy" alt="{n}"></a></li>' for (f, th), n in zip(CERTS, t["cert_names"]))
+    certs = "\n".join(f'          <li><a href="{p}Licenses/{f}.pdf" target="_blank" rel="noopener">{n}</a></li>' for (f, th), n in zip(CERTS, t["cert_names"]))
     return f'''<footer class="site-footer">
   <div class="wrap">
     <div class="foot-grid">
@@ -213,7 +213,8 @@ def footer(lang):
           <img src="{p}images/affiliation5.png" width="1888" height="499" alt="{t["nvkh_alt"]}">
           <img src="{p}images/affiliation6.png" width="180" height="89" alt="{t["rbcz_alt"]}">
         </div>
-        <ul class="foot-certs" aria-label="{t["certs"]}">
+        <h4 class="foot-sub">{t["certs_h"]}</h4>
+        <ul class="foot-certs">
 {certs}
         </ul>
       </div>
