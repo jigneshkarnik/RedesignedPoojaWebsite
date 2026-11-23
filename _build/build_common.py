@@ -202,7 +202,7 @@ def footer(lang):
     t = T[lang]
     p = "../" if lang == "nl" else ""
     lis = "\n".join(f'          <li><a href="{h}"{(" rel=" + chr(34) + "noopener nofollow" + chr(34)) if h.startswith("http") else ""}>{l}</a></li>' for h, l in t["f_links"])
-    certs = "\n".join(f'          <li><a href="{p}Licenses/{f}.pdf" target="_blank" rel="noopener">{n}</a></li>' for (f, th), n in zip(CERTS, t["cert_names"]))
+    certs = "\n".join(f'          <li><a href="#{f}-modal" class="cert-link" data-pdf="{p}Licenses/{f}.pdf">{n}</a></li>' for (f, th), n in zip(CERTS, t["cert_names"]))
     return f'''<footer class="site-footer">
   <div class="wrap">
     <div class="foot-grid">
@@ -242,6 +242,18 @@ def footer(lang):
     </div>
   </div>
 </footer>
+<div id="cert-modal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="cert-modal-title">
+  <div class="modal-backdrop"></div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="cert-modal-title"></h2>
+      <button class="modal-close" aria-label="Close" type="button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div id="pdf-viewer" class="pdf-viewer"></div>
+    </div>
+  </div>
+</div>
 <script src="{p}js/site.js" defer></script>
 </body>
 </html>

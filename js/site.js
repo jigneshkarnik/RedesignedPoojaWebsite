@@ -104,4 +104,52 @@ if (window.top !== window.self) { try { window.top.location = window.self.locati
         .then(function () { submit.disabled = false; });
     });
   }
+
+  // Certificate modal: view PDFs without download option
+  var modal = document.getElementById('cert-modal');
+  var pdfViewer = document.getElementById('pdf-viewer');
+  var modalTitle = document.getElementById('cert-modal-title');
+  var modalClose = document.querySelector('.modal-close');
+  var certLinks = document.querySelectorAll('.cert-link');
+
+  function openCertModal(url, title) {
+    pdfViewer.innerHTML = '<iframe src="' + url + '#toolbar=0&navpanes=0&scrollbar=0" title="' + title + '"></iframe>';
+    modalTitle.textContent = title;
+    modal.setAttribute('aria-hidden', 'false');
+    modalClose.focus();
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCertModal() {
+    modal.setAttribute('aria-hidden', 'true');
+    pdfViewer.innerHTML = '';
+    document.body.style.overflow = '';
+  }
+
+  certLinks.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      var url = link.getAttribute('data-pdf');
+      var title = link.textContent;
+      openCertModal(url, title);
+    });
+  });
+
+  if (modalClose) {
+    modalClose.addEventListener('click', closeCertModal);
+  }
+
+  if (modal) {
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal || e.target === document.querySelector('.modal-backdrop')) {
+        closeCertModal();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') {
+      closeCertModal();
+    }
+  });
 })();

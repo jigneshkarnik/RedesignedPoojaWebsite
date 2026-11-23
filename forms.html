@@ -85,12 +85,12 @@
         </div>
         <h4 class="foot-sub">Certificates and registrations (PDF)</h4>
         <ul class="foot-certs">
-          <li><a href="Licenses/NVKH%20Registration-24021.pdf" target="_blank" rel="noopener">NVKH registration</a></li>
-          <li><a href="Licenses/RBCZ.pdf" target="_blank" rel="noopener">RBCZ licence</a></li>
-          <li><a href="Licenses/Nuffic.pdf" target="_blank" rel="noopener">Nuffic diploma assessment</a></li>
-          <li><a href="Licenses/CCH.pdf" target="_blank" rel="noopener">CCH registration (India)</a></li>
-          <li><a href="Licenses/MBK.pdf" target="_blank" rel="noopener">Diploma (MBK)</a></li>
-          <li><a href="Licenses/AGB.pdf" target="_blank" rel="noopener">AGB registration</a></li>
+          <li><a href="#NVKH%20Registration-24021-modal" class="cert-link" data-pdf="Licenses/NVKH%20Registration-24021.pdf">NVKH registration</a></li>
+          <li><a href="#RBCZ-modal" class="cert-link" data-pdf="Licenses/RBCZ.pdf">RBCZ licence</a></li>
+          <li><a href="#Nuffic-modal" class="cert-link" data-pdf="Licenses/Nuffic.pdf">Nuffic diploma assessment</a></li>
+          <li><a href="#CCH-modal" class="cert-link" data-pdf="Licenses/CCH.pdf">CCH registration (India)</a></li>
+          <li><a href="#MBK-modal" class="cert-link" data-pdf="Licenses/MBK.pdf">Diploma (MBK)</a></li>
+          <li><a href="#AGB-modal" class="cert-link" data-pdf="Licenses/AGB.pdf">AGB registration</a></li>
         </ul>
       </div>
       <div>
@@ -124,6 +124,18 @@
     </div>
   </div>
 </footer>
+<div id="cert-modal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="cert-modal-title">
+  <div class="modal-backdrop"></div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="cert-modal-title"></h2>
+      <button class="modal-close" aria-label="Close" type="button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div id="pdf-viewer" class="pdf-viewer"></div>
+    </div>
+  </div>
+</div>
 <script src="js/site.js" defer></script>
 </body>
 </html>
